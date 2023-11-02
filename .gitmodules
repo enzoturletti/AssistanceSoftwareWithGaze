@@ -1,0 +1,9 @@
+[submodule "core"]
+	path = core
+	url = https://github.com/enzoturletti/AssistanceSoftwareWithGaze-Core.git
+[submodule "graphics"]
+	path = graphics
+	url = https://github.com/enzoturletti/AssistanceSoftwareWithGaze-UI.git
+[submodule "train"]
+	path = train
+	url = https://github.com/enzoturletti/AssistanceSoftwareWithGaze-Train.git
