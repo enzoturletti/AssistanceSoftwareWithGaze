@@ -1,0 +1,1 @@
+python3 /workspaces/AssistanceSoftwareWithGaze/core/scripts/run_blink_detector_calibration.py
