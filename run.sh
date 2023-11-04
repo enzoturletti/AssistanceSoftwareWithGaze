@@ -11,7 +11,7 @@ while ! curl -s http://localhost:5000 > /dev/null 2>&1; do
     sleep 1
 done
 
-sleep 30
+sleep 70
 firefox http://localhost:5000
 
 # Set up a signal handler to kill child processes on exit
