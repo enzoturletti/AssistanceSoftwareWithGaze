@@ -131,6 +131,9 @@ python3 core/test/test_gaze_model_grid_performance.py
 
 ## Train the model :
 
+This repository allows the possibility to train your own model, there is a script to train MPIIFaceGaze with ETH-XGaze pre-trained model. You can easily run a training process with the following steps. If you want to change the training parameters you can do so easily in the script `train/run_train.py`.
+
+
 1. First, you should normalizate the dataset. In the root folder run the following script:
 
 ```bash
@@ -142,8 +145,6 @@ python3 train/run_preprocess.py
 ```bash
 python3 train/run_train.py
 ```
-If you want to change the training parameters you can do easily in the script.
-
 
 ## Configuration
 
