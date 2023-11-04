@@ -88,7 +88,7 @@ bash run_click_calibration.sh
   <img src="doc/5.png" width="600" height="300" />
 </p>
 
-8. Precision calibration. This is optional, if you want to use you have to enable it in the config.ini file.
+8. Precision calibration. You should follow the purple point in the screen. This is optional, if you want to use you have to enable it in the config.ini file.
 
 ```bash
 bash run_gaze_calibration.sh
@@ -108,9 +108,9 @@ bash run_gaze_calibration.sh
 bash run.sh
 ```
 
-2. In the terminal we should look for a link like "http://localhost:5000/".
+2. Wait until Web Application is opened.
 
-3. Enter to the link and enjoy.
+3. Enjoy.
 
 ## Different Tests
 
