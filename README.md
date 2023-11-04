@@ -1,19 +1,38 @@
-# **Assistance Software with Gaze**
-
-This repository is about the development of a software tool for Notebook computers that allows people who use it to carry out basic communicative actions: writing on the screen and communicating needs through the basic use of sight, more specifically with their gaze. The theoretical background behind this project is this [documentation]( https://drive.google.com/file/d/1zWvhVu0elrEQMR7QTvGBvNv_nuOfBcPx/view?usp=drive_link).
-
+# Assistance Software with Gaze
 
 <p align="center">
-  <img src="doc/1.png" width="600" height="300"/>
+  <img src="doc/1.png" width="500" height="250"/>
+</p>
+
+<p align="center">
+  <img src="doc/10.png" width="500" height="250"/>
+</p>
+
+<p align="center">
+  <img src="doc/9.png" width="500" height="250"/>
 </p>
 
 
-<p align="center">
-  <img src="doc/2.gif" alt="animated" width="600" height="300"/>
-</p>
+## Description
 
+This repository contains a development Docker with a software tool for Notebook computers that allows people who use it to carry out basic communicative actions: writing on the screen and communicating needs through the basic use of sight, more specifically with their gaze. The theoretical background behind this project is this [documentation]( https://drive.google.com/file/d/1zWvhVu0elrEQMR7QTvGBvNv_nuOfBcPx/view?usp=drive_link).
 
-## **Requirements**:
+With this repository you can:
+
+1. Use a software application to communicate with your gaze.
+2. Train the IA Model to estimate Gaze with a face photo.
+3. Different tests to improve the result.
+
+## Table of Contents
+
+- [Requirements](#Requirements)
+- [Installation](#Installation)
+- [Run Application](#run-application)
+- [Testing](#different-tests)
+- [Configuration](#configuration)
+- [Train your own model](#configuration-file)
+
+## Requirements:
 
 To use all the features of this repository (user application, testing tools, model training), we must have the following installed:
 
@@ -45,23 +64,19 @@ git submodule update --init --recursive
 bash setup_project.sh
 ```
 
-4. In Visual Studio Code, use the Development Docker Container extension to open the project inside a Docker Container. 
+4. In Visual Studio Code, press `Ctrl+Shift+P` and find `Reopen in container` option: 
 
 <p align="center">
-  <img src="doc/3.png" width="800" height="400"/>
+  <img src="doc/4.png" width="600"/>
 </p>
 
-<p align="center">
-  <img src="doc/4.png"/>
-</p>
-
-5. Once the container is open, then, set git credentials in the terminal.
+6. Once the container is open, then, set Git credentials in the terminal.
 
 <p align="center">
   <img src="doc/8.png" width="600" height="150" />
 </p>
 
-6. Configure the project in config.ini file. At the end, there is a section with an explanation about this file.
+6. Configure the project in config.ini file. At the end, there is a [Configuration Section](#configuration-file) with an explanation about this file.
 
 7. Run the following script and follow the instructions. 
 
@@ -85,7 +100,7 @@ bash run_gaze_calibration.sh
 
 9. Enjoy. The project is ready to use.
 
-## Run Flutter Application
+## Run Application
 
 1. Run the following script:
 
@@ -97,22 +112,40 @@ bash run.sh
 
 3. Enter to the link and enjoy.
 
-## Run scripts to test the pipeline
+## Different Tests
 
-In this project, we have different scripts to test the entire pipeline of the application:
+In this project, we have different scripts to test the entire application pipeline.
 
 <p align="center">
   <img src="doc/7.png" />
 </p>
 
-1. To enter to this folder, open the root folder in the terminal and introduce, for example:
+1. To run this scripts, you have to run in the Visual Studio Code terminal using Python interpreter. For example, to test the precision in a grid:
 
 ```bash
-python3 core/test/test_blink_detector.py
+python3 core/test/test_gaze_model_grid_performance.py
+```
+<p align="center">
+  <img src="doc/2.gif" alt="animated" width="600" height="300"/>
+</p>
+
+## Train the model :
+
+1. First, you should normalizate the dataset. In the root folder run the following script:
+
+```bash
+python3 train/run_preprocess.py
 ```
 
+2. To train the model, you should run the following script in the root folder:
 
-## Configuration file:
+```bash
+python3 train/run_train.py
+```
+If you want to change the training parameters you can do easily in the script.
+
+
+## Configuration
 
 1. Configuration file: in the root folder, there is a file called "config.ini". In this file, we have many available configurations.
 
