@@ -58,7 +58,7 @@ cd AssistanceSoftwareWithGaze
 git submodule update --init --recursive
 ```
 
-3. Run setup script and configure Git user and repository path:
+3. Run setup script:
 
 ```bash
 bash setup_project.sh
