@@ -36,12 +36,10 @@ With this repository you can:
 
 To use all the features of this repository (user application, testing tools, model training), we must have the following installed:
 
-- Ubuntu 20.04
+- Ubuntu 20.04 (only tested in this OS).
 - Visual Studio Code
 - Docker
 - Remote Container Extension para Visual Studio Code
-
-If we need to use only the user application it can work in Windows too. 
 
 ## Installation
 
